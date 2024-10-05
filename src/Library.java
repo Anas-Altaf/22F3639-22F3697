@@ -13,13 +13,15 @@ public class Library {
         System.out.println("Books in library: " + books);
     }
 
-    public void removeBook(String bookName) {
+    public boolean removeBook(String bookName) {
         if (books.remove(bookName)) {
             System.out.println(bookName + " removed from library.");
+            return true;
         } else {
             System.out.println(bookName + " not found in library.");
         }
-
+        return false;
+    }
     public boolean searchBook(String bookName) {
         return books.contains(bookName);
 
